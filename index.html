@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta name="description" content="Explore the Classpad fx-CP400">
+    <meta itemprop="name" content="Classpad Dev">
+    <meta itemprop="description" content="Explore the Classpad fx-CP400">
+    <meta itemprop="image"
+        content="https://res.cloudinary.com/s3ansh33p/image/upload/fl_lossy,f_auto/v1640786848/Classpad/classspad_2_grande_asfypp.webp">
+    <meta property="og:url" content="https://classpaddev.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Classpad Dev">
+    <meta property="og:description" content="Explore the Classpad fx-CP400">
+    <meta property="og:image"
+        content="https://res.cloudinary.com/s3ansh33p/image/upload/fl_lossy,f_auto/v1640786848/Classpad/classspad_2_grande_asfypp.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Classpad Dev">
+    <meta name="twitter:description" content="Explore the Classpad fx-CP400">
+    <meta name="twitter:image"
+        content="https://res.cloudinary.com/s3ansh33p/image/upload/fl_lossy,f_auto/v1640786848/Classpad/classspad_2_grande_asfypp.webp">
+    <meta name="description" content="Explore the Classpad fx-CP400" />
+    <meta name="author" content="Sean McGinty" />
+    <meta name="google-site-verification" content="XZl64GJFi9Ga4ctg3f_tQwNCwTmpFj70GKCxNVgqOk4" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Classpad Dev</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/png"
+        href="https://res.cloudinary.com/s3ansh33p/image/upload/fl_lossy,f_auto/v1640786848/Classpad/classspad_2_grande_asfypp.webp" />
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Poppins:wght@100;200;300;400;500;600;700&amp;display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Poppins:wght@100;200;300;400;500;600;700&amp;display=swap">
+    </noscript>
+    <!-- Font awesome-->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </noscript>
+    <!-- Overlay Scrollbars-->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/css/OverlayScrollbars.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/css/OverlayScrollbars.css">
+    </noscript>
+    <!-- Bootstrap -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    </noscript>
+    <!-- Custom CSS -->
+    <link rel="preload" href="index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="index.css">
+    </noscript>
+    <!-- Loader CSS -->
+    <style>
+        #loader {
+            width: 100vw;
+            height: 100vh;
+            background: black;
+            position: fixed;
+            z-index: 1031;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lds-dual-ring {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+        }
+
+        .lds-dual-ring:after {
+            content: " ";
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            border-color: #fff transparent #fff transparent;
+            animation: lds-dual-ring 1.2s linear infinite;
+        }
+
+        @keyframes lds-dual-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="lds-dual-ring"></div>
+    </div>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="top">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" onclick='nav("top")'>Classpad Dev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav me-auto mb-3 mb-lg-0 ms-lg-4"></div>
+                <div class="d-flex align-items-center">
+                    <ul class="navbar-nav me-auto mb-3 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link text-white" onclick='nav("get-started")'>Get Started</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white" onclick='nav("features")'>Features</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" onclick='nav("discord")'>Discord</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" onclick='nav("specs")'>Specifications</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white" onclick='nav("programs")'>Programs</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="https://classpaddev.github.io/wiki/"
+                                target="_blank" rel="noreferrer">Wiki</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="position-relative w-100 h-100 immersive">
+        <!-- Background Header -->
+        <div class="bg-head"></div>
+        <!-- Header-->
+
+        <header class="position-absolute w-100 h-100 p-3 p-md-5 text-left overflow-hidden">
+
+            <div class="pt-28 pb-28 position-relative">
+                <div class="row g-16">
+                    <div class="col-12 col-md-6 d-flex align-items-center">
+                        <div class="mw-md-lg">
+                            <span class="mb-4 badge rounded-pill bg-light text-dark text-uppercase shadow">Hollyhock-2
+                                for fx-CP400</span>
+                            <h1 class="mb-6 impact font-heading fs-1" style="letter-spacing: -1px;">Unlock Your Classpad
+                                II <span>Superpowers</span> ⚡</h1>
+                            <p class="mb-8 fs-9 fw-medium text-secondary">With one launcher, unlock a myriad of
+                                possibilities. From games to emulators, explore our ever-expanding library of
+                                programs... You can even create your own!</p>
+
+                            <div class="row g-4 mt-2">
+                                <div class="col-12 col-md-auto"><a class="btn btn-lg btn-xl btn-primary w-100 shadow"
+                                        href="#get-started" onclick='nav("get-started")'>Get Started</a></div>
+                                <div class="col-12 col-md-auto">
+                                    <div class="rounded"><a class="btn btn-lg btn-xl btn-outline-light w-100 text-light-dark"
+                                            href="#programs">View Programs</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mt-2">
+                        <div class="row justify-content-center">
+                            <div class="position-relative col-auto">
+                                <img class="position-absolute top-0 start-0 mt-n12 ms-n12" style="z-index: 1;"
+                                    src="img/cp.svg" alt="Classpad II">
+                                <img class="position-absolute bottom-0 end-0 me-n5 mb-n5" style="z-index: 1;"
+                                    src="flex-assets/elements/dots-blue.svg" alt="">
+                                <img class="position-relative img-fluid p-5 screenshot" id="screenshots" src="img/doom.png"
+                                    alt="Doom on the Classpad II">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--
+            <div class="d-flex flex-column align-items-center text-center">
+                <h1 class="display-4 font-weight-normal">CLASSPAD DEV</h1>
+                <h3 class="lead font-weight-normal">Explore the Classpad II fx-CP400 using hollyhock-2!</h3>
+                <a class="btn btn-primary mt-3 btn-lg" onclick='nav("get-started")'>Get Started</a>
+            </div>
+            -->
+        </header>
+    </div>
+
+
+    <!-- Getting Started -->
+    <section class="position-relative overflow-hidden p-3 p-md-5 text-center d-md-flex flex-md-equal w-100 bg-dark"
+        id="get-started">
+        <div class="mr-md-3 py-3 px-3 py-md-5 px-md-5 text-center overflow-hidden w-100 d-flex align-items-center">
+            <div class="my-3 py-3 row align-items-center">
+                <h2 class="display-5">GET STARTED</h2>
+                <p class="lead">First of all, Welcome! We look forward to you joining the community!</p>
+                <p class="lead">Before you can run programs on the Classpad, you need to install some software. The
+                    launcher used for our programs is hollyhock-2.</p>
+                <a class="my-2" href="https://github.com/SnailMath/hollyhock-2" target="_blank" rel="noreferrer"><img
+                        alt="GitHub Repo Preview" style="filter:invert(1); width: clamp(250px, 100%, 500px);"
+                        src="https://gh-card.dev/repos/SnailMath/hollyhock-2.svg?fullname="></a>
+                <p class="lead mt-2">If you have issues with installing the Launcher, you can join the Discord and ask
+                    for
+                    help, or watch the video below.</p>
+                <iframe width="100%" height="auto" style="aspect-ratio:16/9;"
+                    src="https://www.youtube.com/embed/Llibqwt7Jsg" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- Features -->
+    <section class="position-relative overflow-hidden p-3 p-md-5 text-center w-100" id="features">
+        <div class="mr-md-3 py-3 px-3 py-md-5 px-md-5 my-3">
+            <h2 class="display-5">FEATURES</h2>
+            <p class="lead grey-text text-center w-responsive mx-auto mb-5">Hollyhock-2 is a feature-rich launcher.
+                Here are a few features.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row mb-3">
+                        <div class="col-2">
+                            <i class="fas fa-2x fa-rocket"></i>
+                        </div>
+                        <div class="col-10">
+                            <h5 class="font-weight-bold mb-3">Premade Apps</h5>
+                            <p class="grey-text">There are already some programs/games that you can just use without
+                                programming knowledge.</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-2">
+                            <i class="fas fa-2x fa-flask"></i>
+                        </div>
+                        <div class="col-10">
+                            <h5 class="font-weight-bold mb-3">Experimental</h5>
+                            <p class="grey-text">You can write low level code, such as assembly if you wanted,
+                                giving you access to all the hardware in the Classpad.</p>
+                        </div>
+                    </div>
+                    <div class="row mb-md-0 mb-3">
+                        <div class="col-2">
+                            <i class="fas fa-2x fa-tools"></i>
+                        </div>
+                        <div class="col-10">
+                            <h5 class="font-weight-bold mb-3">Utilities</h5>
+                            <p class="grey-text">There a some utilities to take a low level look at the Classpad, such
+                                as a hex editor of the loaded memory - in real time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img class="img-fluid mb-5"
+                        src="https://res.cloudinary.com/s3ansh33p/image/upload/fl_lossy,f_auto/v1640786823/Classpad/classpadImg_shld8i.webp"
+                        alt="Classpad II fx-CP400">
+                </div>
+                <div class="col-md-4">
+                    <div class="row mb-3">
+                        <div class="col-2">
+                            <i class="fas fa-2x fa-book"></i>
+                        </div>
+                        <div class="col-10">
+                            <h5 class="font-weight-bold mb-3">Documented</h5>
+                            <p class="grey-text">The launcher comes with example programs and documentation to get you
+                                started.</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-2">
+                            <i class="fas fa-2x fa-bolt"></i>
+                        </div>
+                        <div class="col-10">
+                            <h5 class="font-weight-bold mb-3">Fast</h5>
+                            <p class="grey-text">Programs are compiled to either binary or .hhk
+                                which allows for greater performance compared to programs in CASIO basic.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="fas fa-2x fa-magic"></i>
+                        </div>
+                        <div class="col-10">
+                            <h5 class="font-weight-bold mb-3">Easy to Use</h5>
+                            <p class="grey-text mb-0">Once installed, the launcher is intuitive and easy to navigate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Discord -->
+    <section class="position-relative overflow-hidden p-3 p-md-5 text-center d-md-flex flex-md-equal w-100 bg-dark"
+        id="discord">
+        <div class="mr-md-3 py-3 px-3 py-md-5 px-md-5 text-center overflow-hidden w-100 d-flex align-items-center">
+            <div class="my-3 py-3 row align-items-center">
+                <h2 class="display-5">JOIN THE DISCORD</h2>
+                <p class="lead">Looking for more? Join our Discord server! Whether you are new to modding / programming
+                    or an expert, we are
+                    sure you'll find something there that interests you. If you ever need help with installing, running
+                    or developing programs,
+                    we are here to help!</p>
+                <a class="btn btn-primary d-flex align-items-center justify-content-center"
+                    href="&#x68;&#x74;&#x74;&#x70;&#x73;&colon;&sol;&sol;&#x64;&#x69;&#x73;&#x63;&#x6f;&#x72;&#x64;&period;&#x67;&#x67;&sol;&#x6b;&#x6e;&#x70;&#x63;&#x4e;&#x4a;&#x54;&#x7a;&#x70;&#x64;"
+                    target="_blank" rel="noopener">
+                    <i class="fab fa-discord me-2 hover-white"></i>
+                    <span class="fw-bold">DISCORD</span>
+                </a>
+            </div>
+        </div>
+        <div class="mr-md-3 py-3 px-3 py-md-5 px-md-5 text-center overflow-hidden w-100">
+            <iframe
+                src="&#x68;&#x74;&#x74;&#x70;&#x73;&colon;&sol;&sol;&#x64;&#x69;&#x73;&#x63;&#x6f;&#x72;&#x64;&period;&#x63;&#x6f;&#x6d;&sol;&#x77;&#x69;&#x64;&#x67;&#x65;&#x74;&quest;&#x69;&#x64;&equals;&#x33;&#x32;&#x35;&#x36;&#x38;&#x38;&#x37;&#x30;&#x37;&#x33;&#x30;&#x30;&#x34;&#x35;&#x38;&#x34;&#x39;&#x36;&amp;&#x61;&#x6d;&#x70;&semi;&#x74;&#x68;&#x65;&#x6d;&#x65;&equals;&#x64;&#x61;&#x72;&#x6b;"
+                width="100%" height="500" allowtransparency="true" frameborder="0"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+    </section>
+    <div>
+        <!-- Specs -->
+        <section class="position-relative overflow-hidden p-3 p-md-5 text-center w-100" id="specs">
+            <div class="mr-md-3 py-3 px-3 py-md-5 px-md-5 my-3">
+                <h2 class="display-5">SPECIFICATIONS</h2>
+                <div>
+                    <div class="container text-center dimensions d-flex align-items-center justify-content-center my-4">
+                        <img width="640" height="333"
+                            src="https://res.cloudinary.com/s3ansh33p/image/upload/v1640806035/Classpad/cp_iso_exp_1_w9smal.svg"
+                            alt="Diagram of Classpad" style="filter: brightness(1.5);">
+                    </div>
+
+                    <div class="features container svg-gray">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h2>
+                                    <span class="text-muted">General</span>
+                                </h2>
+                                <div class="item">
+                                    <div class="pictogram"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="32"
+                                            viewBox="0 0 35 32">
+                                            <path
+                                                d="M8 29h17v1H8zm8-25l10 10-10 10L6 14 16 4m0-1c-.3 0-.5.1-.7.3l-10 10c-.4.4-.4 1 0 1.4l10 10c.2.2.4.3.7.3s.5-.1.7-.3l10-10c.4-.4.4-1 0-1.4l-10-10c-.2-.2-.4-.3-.7-.3z">
+                                            </path>
+                                            <path
+                                                d="M5 14h22L16 24.8zm24 5s2.1 3 2.1 4.1c0 1-1 1.9-1.9 1.9-1.1 0-2.1-1-2.1-2s1.9-4 1.9-4z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="data">
+                                        <h4>Color</h4>
+                                        <p>White</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pictogram"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="32"
+                                            viewBox="0 0 35 32">
+                                            <path d="M6 5.5L28.7 29H6V5.5M5 3v27h26L5 3z"></path>
+                                            <path
+                                                d="M10 16.4l8.5 8.5H10v-8.5M9 14v12h12L9 14zM6 8h1v1H6zm0 2h1v1H6zm0 2h1v1H6zm0 2h1v1H6zm0 2h1v1H6zm0 2h1v1H6zm0 2h1v1H6zm0 2h1v1H6zm0 2h1v1H6zm0 2h1v1H6zm12 2h1v1h-1zm-2 0h1v1h-1zm-2 0h1v1h-1zm-2 0h1v1h-1zm-2 0h1v1h-1zm-2 0h1v1H8zm16 0h1v1h-1zm-2 0h1v1h-1zm-2 0h1v1h-1z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="data">
+                                        <h4>Dimensions</h4>
+                                        <p>20.6 × 8.9 × 2.11 cm</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pictogram"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="32"
+                                            viewBox="0 0 35 32">
+                                            <path d="M5 30h25l-4-16H9z"></path>
+                                            <circle cx="17.5" cy="12.6" r="2.2"></circle>
+                                            <circle class="stroked" cx="17.5" cy="8" r="5"></circle>
+                                        </svg>
+                                    </div>
+                                    <div class="data">
+                                        <h4>Weight</h4>
+                                        <p>315 grams</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pictogram"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="32"
+                                            viewBox="0 0 35 32">
+                                            <path
+                                                d="M17.5 4C23.8 4 29 9.2 29 15.5S23.8 27 17.5 27 6 21.8 6 15.5 11.2 4 17.5 4m0-1C10.6 3 5 8.6 5 15.5S10.6 28 17.5 28 30 22.4 30 15.5 24.4 3 17.5 3z">
+                                            </path>
+                                            <path
+                                                d="M20.9 18c-.2 1.7-1.7 3-3.4 3s-3.2-1.3-3.4-3H5.9s2.4 9.6 11.6 9.6S29.1 18 29.1 18h-8.2zm3.1-7l-4.8 3.6 1.2 1.2z">
+                                            </path>
+                                            <circle class="stroked" cx="17.5" cy="17.5" r="3.5"></circle>
+                                        </svg>
+                                    </div>
+                                    <div class="data">
+                                        <h4>CPU</h4>
+                                        <p>SuperH 4 (SH7305) processor</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pictogram"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="32"
+                                            viewBox="0 0 35 32">
+                                            <path
+                                                d="M25.8 7c.1 0 .2.1.2.2v17.5c0 .2-.1.3-.3.3H8.2c-.1 0-.2-.1-.2-.2V7.2c0-.1.1-.2.2-.2h17.6m0-1H8.2C7.6 6 7 6.6 7 7.2v17.5c0 .7.6 1.3 1.2 1.3h17.5c.7 0 1.2-.6 1.2-1.2V7.2c.1-.6-.5-1.2-1.1-1.2zM9 2h1v4H9zm3 0h1v4h-1zm3 0h1v4h-1zm3 0h1v4h-1zm3 0h1v4h-1zm3 0h1v4h-1zM9 26h1v4H9zm3 0h1v4h-1zm3 0h1v4h-1zm3 0h1v4h-1zm3 0h1v4h-1zm3 0h1v4h-1zm3-3h4v1h-4zm0-3h4v1h-4zm0-3h4v1h-4zm0-3h4v1h-4zm0-3h4v1h-4zm0-3h4v1h-4zM3 23h4v1H3zm0-3h4v1H3zm0-3h4v1H3zm0-3h4v1H3zm0-3h4v1H3zm0-3h4v1H3z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="data">
+                                        <h4>Total Memory</h4>
+                                        <p>64 MB</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pictogram"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="32"
+                                            viewBox="0 0 35 32">
+                                            <path
+                                                d="M25.8 7c.1 0 .2.1.2.2v17.5c0 .2-.1.3-.3.3H8.2c-.1 0-.2-.1-.2-.2V7.2c0-.1.1-.2.2-.2h17.6m0-1H8.2C7.6 6 7 6.6 7 7.2v17.5c0 .7.6 1.3 1.2 1.3h17.5c.7 0 1.2-.6 1.2-1.2V7.2c.1-.6-.5-1.2-1.1-1.2zM9 2h1v4H9zm3 0h1v4h-1zm3 0h1v4h-1zm3 0h1v4h-1zm3 0h1v4h-1zm3 0h1v4h-1zM9 26h1v4H9zm3 0h1v4h-1zm3 0h1v4h-1zm3 0h1v4h-1zm3 0h1v4h-1zm3 0h1v4h-1zm3-3h4v1h-4zm0-3h4v1h-4zm0-3h4v1h-4zm0-3h4v1h-4zm0-3h4v1h-4zm0-3h4v1h-4zM3 23h4v1H3zm0-3h4v1H3zm0-3h4v1H3zm0-3h4v1H3zm0-3h4v1H3zm0-3h4v1H3z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="data">
+                                        <h4>User Memory</h4>
+                                        <p>512 KB</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pictogram"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="32"
+                                            viewBox="0 0 35 32">
+                                            <path
+                                                d="M25 11v11H15l-5-3v-5l5-3zM9 15h1v3H9zm-2 0h1v3H7zm-3 0h2v3H4zm21 1h6.2v1H25z">
+                                            </path>
+                                            <path d="M30.9 14.1V19H25v-4.9h5.9M32 13h-8v7h8v-7z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="data">
+                                        <h4>Connector</h4>
+                                        <p>USB Mini-B / 3pin cable (up to 115.2 kilobits/s)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <h2>
+                                    <span class="text-muted">Screen</span>
+                                </h2>
+                                <div class="item">
+                                    <div class="pictogram"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="32"
+                                            viewBox="0 0 35 32">
+                                            <path d="M30 3h1v9h-1z"></path>
+                                            <path d="M22 3h9v1h-9zM5 20h1v9H5z"></path>
+                                            <path
+                                                d="M5 28h9v1H5zM30.9 3.8l-10 10c-.2.2-.5.2-.7 0-.2-.2-.2-.5 0-.7l10-10c.2-.2.5-.2.7 0 .1.2.1.6 0 .7z">
+                                            </path>
+                                            <path
+                                                d="M15.9 18.8l-10 10c-.2.2-.5.2-.7 0-.2-.2-.2-.5 0-.7l10-10c.2-.2.5-.2.7 0 .1.2.1.6 0 .7z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="data">
+                                        <h4>Size</h4>
+                                        <p>4.8-inch diagonal</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pictogram"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="32"
+                                            viewBox="0 0 35 32">
+                                            <path
+                                                d="M5 7h4v3H5zM10 7h4v3h-4zM15 7h4v3h-4zM20 7h4v3h-4zM25 7h4v3h-4zM5 11h4v3H5zM10 11h4v3h-4zM15 11h4v3h-4zM20 11h4v3h-4zM25 11h4v3h-4zM5 15h4v3H5zM10 15h4v3h-4zM15 15h4v3h-4zM20 15h4v3h-4zM25 15h4v3h-4zM5 19h4v3H5zM10 19h4v3h-4zM15 19h4v3h-4zM20 19h4v3h-4zM25 19h4v3h-4z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="data">
+                                        <h4>Resolution</h4>
+                                        <p>320 × 528</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pictogram"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="32"
+                                            viewBox="0 0 35 32">
+                                            <path d="M31 8v14H4V8h27m1-1H3v16h29V7zM9 25h17v1H9z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="data">
+                                        <h4>Type</h4>
+                                        <p>IPS LCD ? </p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pictogram"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="32"
+                                            viewBox="0 0 35 32">
+                                            <path
+                                                d="M8 29h17v1H8zm8-25l10 10-10 10L6 14 16 4m0-1c-.3 0-.5.1-.7.3l-10 10c-.4.4-.4 1 0 1.4l10 10c.2.2.4.3.7.3s.5-.1.7-.3l10-10c.4-.4.4-1 0-1.4l-10-10c-.2-.2-.4-.3-.7-.3z">
+                                            </path>
+                                            <path
+                                                d="M5 14h22L16 24.8zm24 5s2.1 3 2.1 4.1c0 1-1 1.9-1.9 1.9-1.1 0-2.1-1-2.1-2s1.9-4 1.9-4z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="data">
+                                        <h4>Colors</h4>
+                                        <p>65 536</p>
+                                    </div>
+                                </div>
+                                <br>
+                                <h2>
+                                    <span class="text-muted">Battery</span>
+                                </h2>
+                                <div class="item">
+                                    <div class="pictogram"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="32"
+                                            viewBox="0 0 35 32">
+                                            <path
+                                                d="M6 8v15H4V8h2m1-1H3v17h4V7zm17 1v15H9V8h15m1-1H8v17h17V7zm4 1v4h2v7h-2v4h-2V8h2m1-1h-4v17h4v-4h2v-9h-2V7z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="data">
+                                        <h4>Power</h4>
+                                        <p>4 AAA alkaline or nickel-metal hydride batteries</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="pictogram"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="32"
+                                            viewBox="0 0 35 32">
+                                            <path
+                                                d="M17.5 4C23.8 4 29 9.2 29 15.5S23.8 27 17.5 27 6 21.8 6 15.5 11.2 4 17.5 4m0-1C10.6 3 5 8.6 5 15.5S10.6 28 17.5 28 30 22.4 30 15.5 24.4 3 17.5 3z">
+                                            </path>
+                                            <path d="M15 22l9-10h-5.9L24 6l-2.9-2.1-4.3-.7L13 15h5z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="data">
+                                        <h4>Power Consumption</h4>
+                                        <p>1.0 W - 100 hours in use<sup>1</sup></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="container">
+                        <h6>1. Computed based on typical classroom usage (repeat of 1,2,3 sequence below each hour):
+                        </h6>
+                        <h6>1) Application Menu display for 5 minutes, start of display at "Medium" display brightness,
+                            dimmed automatically after 30 seconds.</h6>
+                        <h6>2) Program application calculation for 5 minutes, "Medium" display brightness.</h6>
+                        <h6>3) Program application display for 50 minutes, display brightness same as 1, above.</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs -->
+        <section class="position-relative d-md-flex flex-md-equal w-100 mb-5" id="programs">
+            <div class="mr-md-3 py-3 px-3 py-md-5 px-md-5 w-100 d-flex align-items-center">
+                <div class="my-3 py-3 row align-items-center">
+                    <h2 class="display-5">PROGRAMS</h2>
+                    <p class="lead">Below are some programs that have been developed for the Classpad II.</p>
+                    <!-- Will need to fix css -->
+                    <div class="d-flex align-items-center justify-content-center">
+                        <div id="table" style="max-width: 90vw;">
+                            <table class="table w-100 text-white">
+                                <tbody>
+                                    <tr>
+                                        <th class="text-white"> Name </th>
+                                        <th> Description </th>
+                                        <th> Author </th>
+                                        <th> Release Date </th>
+                                        <th> Format </th>
+                                        <th> Installation / Loader </th>
+                                        <th> Download </th>
+                                    </tr>
+                                    <tr>
+                                        <th> hollyhock-2 </th>
+                                        <th> The actual launcher needed to run all other programs and games. </th>
+                                        <th> The6P4C (and SnailMath) </th>
+                                        <th> July 2020 </th>
+                                        <th> .bin </th>
+                                        <th> OS update </th>
+                                        <th><a href="https://github.com/SnailMath/hollyhock-2/releases" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+
+
+                                    <tr>
+                                        <th colspan="7" class="text-white"><i>Games using hollyhock-2</i></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Doom (CPDoom)</th>
+                                        <th>A Doom source port for the Classpad II (fx-CP400)</th>
+                                        <th>diddyholz</th>
+                                        <th>March 2024</th>
+                                        <th>.bin + assets</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/diddyholz/CPDoom" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>CPBoy</th>
+                                        <th>A Game Boy (DMG) emulator for the Classpad II (fx-CP400). Forked on <a
+                                                href="https://github.com/classpaddev/CPBoy" target="_blank"
+                                                rel="noopener">ClasspadDev GitHub</a> to automatically recompile using
+                                            GitHub actions if you just want the binary and don't want to build it
+                                            yourself.</th>
+                                        <th>diddyholz (and s3ansh33p)</th>
+                                        <th>Aug 2021</th>
+                                        <th>.bin</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/diddyholz/CPBoy" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th>CP 3D CarGoWroom</th>
+                                        <th>3D racing game experiment using fixed point math</th>
+                                        <th>imHenry + community</th>
+                                        <th>2024</th>
+                                        <th>.bin + assets</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/ClasspadDev/CP-3D-CarGoWroom#readme" target="_blank"
+                                                rel="noopener">included</a></th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th>Tetris (CPoldTetris)</th>
+                                        <th>The very first game written by SnailMath</th>
+                                        <th>SnailMath</th>
+                                        <th>July 2020</th>
+                                        <th>.hhk / .bin</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/SnailMath/CPoldTetris/releases" target="_blank"
+                                                rel="noopener">included</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Minesweeper / MineSnail</th>
+                                        <th>Just a Minesweeper clone for the fx-cp 400 by SnailMath</th>
+                                        <th>SnailMath</th>
+                                        <th>March 2021</th>
+                                        <th>.hhk</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/SnailMath/CPMineSnail/releases" target="_blank"
+                                                rel="noopener">included</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Snake</th>
+                                        <th>Just a Snake clone.</th>
+                                        <th>The6P4C</th>
+                                        <th>Aug 2018</th>
+                                        <th>.hhk</th>
+                                        <th>hollyhock-2</th>
+                                        <th>included</th>
+                                    </tr>
+                                    <tr>
+                                        <th>CPsudoku</th>
+                                        <th>Just a Sudoku game for the fx-cp 400 by SnailMath. Want to solve sudokus?
+                                            Use this
+                                            program. Want to get sudokus solved for you? This program will work as well.
+                                            (The
+                                            solve function isn't completely working...)</th>
+                                        <th>SnailMath</th>
+                                        <th>Oct 2021</th>
+                                        <th>.bin / .elf</th>
+                                        <th>hollyhock-2 / Linux</th>
+                                        <th><a href="https://github.com/SnailMath/CPsudoku/releases" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>ponggers2</th>
+                                        <th>A pong game for the fx-cp 400 by InterChan, with AI opponent and with highly
+                                            advanced graphics (This led to the development of the hhk game engine, see
+                                            below.)
+                                        </th>
+                                        <th>InterChan374</th>
+                                        <th>Nov 2021</th>
+                                        <th>.bin / .hhk</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/InterChan374/ponggers2/releases" target="_blank"
+                                                rel="noopener">download</a>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>CPpong</th>
+                                        <th>Just a simple 2 player Pong game for the fx-cp 400 by SnailMath</th>
+                                        <th>SnailMath</th>
+                                        <th>Sept 2021</th>
+                                        <th>.bin / .hhk / .elf</th>
+                                        <th>hollyhock-2 / Linux</th>
+                                        <th><a href="https://github.com/SnailMath/CPpong/releases" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>CP 3D render</th>
+                                        <th>Transform your ClassPad II into a mini 3D playground</th>
+                                        <th>imHenry</th>
+                                        <th>November 2023</th>
+                                        <th>.bin + assets</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/im-henri/CP_3D_render#readme" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>MineFX</th>
+                                        <th>MineFx is a Minecraft styled 3d isometric renderer</th>
+                                        <th>Adrian8115</th>
+                                        <th>February 2024</th>
+                                        <th>.bin + assets</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/Adrian8115/MineFX/" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+
+                                
+                                    
+                                    <tr>
+                                        <th>CPFlappyBird</th>
+                                        <th>A port of the famous Flappy Bird game for the fx-cp 400 by s3ansh33p.
+                                            Runs at about 20 FPS.</th>
+                                        <th>s3ansh33p</th>
+                                        <th>Jan 2022</th>
+                                        <th>.hhk</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/s3ansh33p/CPFlappyBird/releases" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+
+
+                                    <tr>
+                                        <th colspan="7" class="text-white"><i>Games and stuff WITHOUT hollyhock-2 - ON
+                                                AN
+                                                UNMODIFIED CALCULATOR</i></th>
+                                    </tr>
+                                    <tr>
+                                    </tr>
+                                    <tr>
+                                        <th>OldTicTacToe</th>
+                                        <th>Just a TicTacToe game for the fx-cp 400 by SnailMath. It runs in Casio
+                                            Basic, so you
+                                            don't even need to install hollyhock, this works on the Classpad II and the
+                                            old
+                                            classpad (with the monochrome screen.)</th>
+                                        <th>SnailMath</th>
+                                        <th>March 2021</th>
+                                        <th>.xcp</th>
+                                        <th>'Program' sub menu</th>
+                                        <th><a href="https://github.com/SnailMath/OldTicTacToe/releases" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Undertale</th>
+                                        <th>This is a port of the dungeon game Undertale for the calculator, it uses
+                                            casio
+                                            basic, so hollyhock-2 is not needed. It uses images displayed as backgrounds
+                                            for the
+                                            map, so only the player needs to be displayed, making it playable even
+                                            though games
+                                            written in basic are slower than C games. Essentially a technical preview as
+                                            CASIO
+                                            basic files have a limit.</th>
+                                        <th>s3ansh33p aka mcgintygames</th>
+                                        <th>Dec 2011 / Oct 2019</th>
+                                        <th>.xcp</th>
+                                        <th>'Program' sub menu</th>
+                                        <th><a href="http://mcgintygames.epizy.com/undertale.html" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>txt2xcp</th>
+                                        <th>Just a program to convert text files to the .xcp format, no hollyhock
+                                            needed. Want
+                                            to read ebooks on your calculator?</th>
+                                        <th>SnailMath</th>
+                                        <th>Nov 2020</th>
+                                        <th>.elf / .exe</th>
+                                        <th>Linux / Windows</th>
+                                        <th><a href="https://github.com/SnailMath/txt2xcp/releases" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>txt2xcp (WEB)</th>
+                                        <th>Same as txt2xcp but in a web interface.</th>
+                                        <th>s3ansh33p</th>
+                                        <th>Nov 2021</th>
+                                        <th>.html / .js</th>
+                                        <th>Browser</th>
+                                        <th><a href="https://share.seanmcginty.space" target="_blank"
+                                                rel="noopener">view</a></th>
+                                    </tr>
+
+
+                                    <tr>
+                                        <th colspan="7" class="text-white"><i>Tools and stuff using hollyhock-2</i></th>
+                                    </tr>
+                                    <tr>
+                                    </tr>
+                                    <tr>
+                                        <th>CPvid</th>
+                                        <th>Just a video player for the fx-cp 400 by SnailMath... <a
+                                                href="https://www.youtube.com/playlist?list=PLs6QtoJvhXNpAhjGeDxilkRxTDBIs4jdQ">Watch
+                                                short videos on your calculator.</a> Even with sound, if you connect an
+                                            amplifier to the serial port... (NOT RECOMMENDED!!!)</th>
+                                        <th>SnailMath</th>
+                                        <th>Dec 2020 / Nov 2021</th>
+                                        <th>.bin</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/SnailMath/CPvid/releases" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>CPfilemgr</th>
+                                        <th>Just a file manager for the fx-cp 400 by SnailMath. View your .png and .jpg
+                                            images
+                                            on your calculator or play .wav files...</th>
+                                        <th>SnailMath</th>
+                                        <th>May 2021</th>
+                                        <th>.bin</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/SnailMath/CPfilemgr/releases" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>CPhexEditor</th>
+                                        <th>Just a hex editor for the fx-cp 400 by SnailMath. With this program, you can
+                                            peek
+                                            and poke the ram of the running calculator. (This can't be used to
+                                            circumvent exam
+                                            mode, because hollyhock-2 is disabled in exam mode.) You can use this to
+                                            access
+                                            hardware like the RTC, but for that, you can also use CPclock. (Poke at your
+                                            own
+                                            risk...)</th>
+                                        <th>SnailMath</th>
+                                        <th>Nov 2020</th>
+                                        <th>.hhk</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/SnailMath/CPhexEditor/releases" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>CPclock</th>
+                                        <th>Just a simple clock using the internal RTC for the fx-cp 400 by SnailMath.
+                                            You can
+                                            use this to set the time on the calc. (The clock is reset after the calc is
+                                            on
+                                            standby for a few minutes, so it isn't very useful...)</th>
+                                        <th>SnailMath</th>
+                                        <th>Jun 2021</th>
+                                        <th>.hhk</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/SnailMath/CPclock/releases" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>TarrasK</th>
+                                        <th>Reverse Engineering Toolkit, with disassembly features planned, aiming to
+                                            provide a
+                                            native toolset with GUI. Includes a software breakpoint manager, and
+                                            register dumping when the breakpoint is hit.
+                                        </th>
+                                        <th>TheRainboxPhoenix</th>
+                                        <th>Jan 2022</th>
+                                        <th>.bin / .hhk</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/TheRainbowPhoenix/TarrasK" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>CPShell</th>
+                                        <th>A calculator shell for the fx-cp 400 by s3ansh33p.
+                                            Includes basic commands like ls, cd, cat, echo and history, with more to be
+                                            added.
+                                            Also has a command to change date and time, config files, with plans for
+                                            memory tools.
+                                            Note that I recommend changing the structure of the calculator, which is
+                                            explained in the readme, though it is not required.
+                                            <a href="https://github.com/users/s3ansh33p/projects/3/views/9"
+                                                target="_blank" rel="noopener">More info</a>
+                                        </th>
+                                        <th>s3ansh33p</th>
+                                        <th>Jul 2022</th>
+                                        <th>.hhk</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/s3ansh33p/CPShell" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+
+
+                                    <tr>
+                                        <th colspan="7" class="text-white"><i>App templates and game engines for
+                                                hollyhock-2</i>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                    </tr>
+
+                                    
+                                    <tr>
+                                        <th>Online templates</th>
+                                        <th>A complete guide to get started</th>
+                                        <th>ClassPadDev team</th>
+                                        <th>2024</th>
+                                        <th>.bin / .hhk</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://classpaddev.github.io/wiki/getting-started/introduction/"
+                                                target="_blank" rel="noopener">read</a>
+                                        </th>
+                                    </tr>
+
+                                    <tr>
+                                        <th>app_template</th>
+                                        <th>An empty app as a base for your own creations</th>
+                                        <th>The6P4C and SnailMath</th>
+                                        <th>May 2021</th>
+                                        <th>.bin / .hhk</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/SnailMath/hollyhock-2/tree/master/app_template"
+                                                target="_blank" rel="noopener">download</a>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>CPappTemplate</th>
+                                        <th>An empty app as a base for your own creations, can also be compiled for a pc
+                                            as a
+                                            quick way to test (Doesn't work currently, because I have problems with
+                                            X11...)</th>
+                                        <th>SnailMath</th>
+                                        <th>March 2021</th>
+                                        <th>.hhk / .elf</th>
+                                        <th>hollyhock-2 / Linux</th>
+                                        <th><a href="https://github.com/SnailMath/CPappTemplate" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+                                    <tr>
+                                        <th>hhkEngine</th>
+                                        <th>Some kind of game engine for the Classpad, contains some kind of physics,
+                                            particles,
+                                            texture loading stuff, and more, similar to app_template, but much more
+                                            advanced.
+                                        </th>
+                                        <th>s3ansh33p (and InterChan374)</th>
+                                        <th>Dec 2021</th>
+                                        <th>.hhk</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/s3ansh33p/hhkEngine" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Newlib CP2</th>
+                                        <th>A newlib port for the Classpad II. Use this for stdlib support</th>
+                                        <th>diddyholz</th>
+                                        <th>March 2024</th>
+                                        <th>.bin</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/diddyholz/newlib-cp2" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+
+                                    <tr>
+                                        <th>CP_fixfloat_template</th>
+                                        <th>CP template with fixed point values (16.16)</th>
+                                        <th>imHenry</th>
+                                        <th>October 2023</th>
+                                        <th>.bin</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/im-henri/CP_fixfloat_template" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th>CP-Raycaster-Demo</th>
+                                        <th>About
+                                            A very simple demo of a fixed-point raycaster for the fx-CP400 with texture and sprite support.</th>
+                                        <th>diddyholz</th>
+                                        <th>December 2022</th>
+                                        <th>.bin</th>
+                                        <th>hollyhock-2</th>
+                                        <th><a href="https://github.com/diddyholz/CP-Raycaster-Demo" target="_blank"
+                                                rel="noopener">download</a></th>
+                                    </tr>
+
+                                    <!--
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Just a --- for the fx-cp 400 by SnailMath</th>
+                                    <th>SnailMath</th>
+                                    <th>March 2021</th>
+                                    <th>.hhk</th>
+                                    <th>hollyhock-2</th>
+                                    <th><a href="https://github.com/SnailMath/CPMineSnail/releases" target="_blank" rel="noopener">download</a></th>
+                                </tr>
+                                -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5">
+            <div class="container px-4 px-lg-5">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a class="navbar-brand text-white" onclick='nav("top")'>Classpad Dev</a>
+                </div>
+                <hr class="opacity-100 text-white" />
+                <div class="d-flex align-items-center">
+                    <p class="m-0 text-white me-auto">Made with ❤&#xFE0E; by Sean McGinty</p>
+                    <p class="m-0" id="updated">Last Updated: Loading...</p>
+                </div>
+                <div class="d-flex align-items-center pt-3">
+                    <p class="m-0 text-muted me-auto small">Classpad-dev is a community project not affiliated with
+                        Casio. <br>
+                        The programs and other online content on Classpad-dev remain the property of their authors and
+                        may be subject to licenses or copyrights.<br>
+                        CASIO is a registered trademark of CASIO Computer Co., Ltd. in Japan.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Libraries-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/js/OverlayScrollbars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <!-- Core JS-->
+    <script type="text/javascript">
+        $(function () {
+            gsap.to('#loader', {
+                opacity: 0,
+                duration: 0.5,
+                ease: 'Power3.easeInOut'
+            })
+            setTimeout(() => {
+                $('#loader').remove()
+            }, 250);
+            // GSAP
+            gsap.from('header', {
+                opacity: 0,
+                duration: 1.5,
+                delay: 0.25,
+                ease: 'Power3.easeInOut'
+            })
+
+
+            scrollAnims();
+
+            $.ajax({
+                url: 'https://api.github.com/repos/classpaddev/classpaddev.github.io',
+                dataType: 'json',
+                success: function (data) {
+                    $('#updated').text(`Last updated: ${new Date(data.updated_at).toUTCString()}`);
+                }
+            });
+
+        });
+
+        // States
+        let states = [0, 0, 0, 0];
+        let loadState = [false, false, false, false];
+
+        // Direction Tracking
+        let lastScrollTop = 0;
+        let scrollingUp = false;
+
+        function scrollAnims() {
+            var st = $('.os-viewport')[0].scrollTop;
+            if (st > lastScrollTop) {
+                // downscroll code
+                scrollingUp = false;
+            } else {
+                // upscroll code
+                scrollingUp = true;
+            }
+            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+
+            const sections = document.querySelectorAll('section');
+            for (let i = 0; i < sections.length; i++) {
+                let dim = sections[i].getBoundingClientRect();
+                if (states[i] === 0 || !scrollingUp) {
+                    if (dim.y - window.innerHeight < 0 && dim.y > -window.innerHeight && !scrollingUp) {
+                        // console.log("Showing", sections[i].id)
+                        // console.log(dim.y-window.innerHeight) 
+                        sections[i].style.opacity = 1;
+                        if (!loadState[i]) {
+                            for (let j = 0; j < sections[i].children.length; j++) {
+                                sections[i].children[j].style.opacity = 1;
+                                gsap.from(sections[i].children[j], {
+                                    opacity: 0,
+                                    duration: 1.25,
+                                    ease: 'Power3.easeInOut'
+                                })
+                            }
+                            states[i] = 1;
+                            loadState[i] = true;
+                        }
+                    }
+                } else {
+                    if (dim.y - window.innerHeight > 0 && dim.y > -window.innerHeight) {
+                        states[i] = 0;
+                        // console.log("Reseting", sections[i].id)
+                        // console.log(dim.y-window.innerHeight) 
+                    } else if (dim.y - window.innerHeight > -200 && dim.y > -window.innerHeight && scrollingUp) {
+                        loadState[i] = false;
+                        if (states[i] !== 2) {
+                            // console.log(dim.y - window.innerHeight, sections[i].id)
+                            for (let j = 0; j < sections[i].children.length; j++) {
+                                gsap.to(sections[i].children[j], {
+                                    opacity: 0,
+                                    duration: 1.25,
+                                    ease: 'Power3.easeInOut'
+                                })
+                            }
+                            states[i] = 2;
+                            setTimeout(() => {
+                                if (states[i] !== 0) states[i] = 1;
+                            }, 1250);
+                        }
+                    }
+                }
+            }
+        }
+
+        // OverlayScroll
+        var instance = OverlayScrollbars(document.body, {
+            className: 'os-theme-light',
+            callbacks: {
+                onScroll: () => {
+                    scrollAnims()
+                }
+            },
+            overflowBehavior: {
+                x: "scroll",
+                y: "scroll"
+            }
+        });
+
+        // Table
+        OverlayScrollbars(document.getElementById("table"), {
+            className: 'os-theme-light',
+            overflowBehavior: {
+                x: "scroll",
+                y: "scroll-visible"
+            }
+        });
+
+        // Navigation
+        function nav(id) {
+            if (id === 'top') {
+                instance.scroll([0, 0], 500);
+            } else {
+                instance.scroll({
+                    el: document.getElementById(id),
+                    scroll: {
+                        y: "begin",
+                        x: "never"
+                    }
+                }, 500);
+            }
+        }
+
+        // Scrolling images
+        // Image URLs
+        var images = ["img/gb.png", "img/doom.png", "img/term.png", "img/3drender.png", "img/flappy.png"];
+        var currentIndex = 0;
+
+        // Preload images
+        var preloadedImages = [];
+        images.forEach(function(imageUrl) {
+            var img = new Image();
+            img.src = imageUrl;
+            preloadedImages.push(img);
+        });
+
+        // Function to change image
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('screenshots').src = images[currentIndex];
+        }
+
+        // Initial call
+        changeImage();
+
+        // Start slideshow
+        setInterval(changeImage, 10000); // Change image every 10 seconds
+    </script>
+</body>
+
+</html>
