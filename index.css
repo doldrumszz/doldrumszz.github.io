@@ -163,12 +163,7 @@ svg .stroked {
     border-color: #3d3d3d;
 }
 
-.screenshot {
-    image-rendering: pixelated;
-    margin-top: 2rem;
-    border-radius: 3rem 3rem;
-    background: black;
-}
+
 
 .btn-xl {
     padding: 0.75rem 1.25rem;
