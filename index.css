@@ -239,4 +239,15 @@ svg .stroked {
     line-gap-override: 0.00%;
     size-adjust: 109.69%;
 }
+@keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+    animation: gradient-move 3s infinite linear;
+    --bg-size: 200%;
+}
+
 
