@@ -98,25 +98,50 @@
     <footer class="py-4 bg-dark text-white">
         <p class="m-0">Made by Joshua Walters | <a href="../index.html" class="text-white">Back to Home</a></p>
     </footer>
+
+    
     
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        var url = "https://unblocked-game66.com/gg/slope/";
+        var urlObj = new window.URL(window.location.href);
+        var url = "https://google-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/version@843c1a10f4bf78019b513ea7a8a8c3146f3dfa59/2slope.xml&container=ig";
 
-        document.querySelector('.c-button').onclick = function() {
-            var win = window.open('', '_blank', 'width=100%, height=100%, fullscreen=yes');
-            win.document.body.style.margin = '0';
-            win.document.body.style.height = '100vh';
-            var iframe = win.document.createElement('iframe');
-            iframe.style.border = 'none';
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            iframe.src = url;
-            win.document.body.appendChild(iframe);
-        };
+        if (url) {
+            var win;
+
+            document.querySelector('button').onclick = function() {
+                if (win) {
+                    win.focus();
+                } else {
+                    win = window.open();
+                    win.document.body.style.margin = '0';
+                    win.document.body.style.height = '100vh';
+                    var iframe = win.document.createElement('iframe');
+                    iframe.style.border = 'none';
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    iframe.style.margin = '0';
+                    iframe.src = url;
+                    win.document.body.appendChild(iframe);
+                    
+
+                    var interval = setInterval(function() {
+                        if (win.closed) {
+                            clearInterval(interval);
+                            win = undefined;
+
+                        }
+                    }, 500);
+
+
+                }
+            };
+        }
     </script>
+
+    
     
 </body>
 </html>
