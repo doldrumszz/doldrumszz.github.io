@@ -105,36 +105,40 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        var urlObj = new window.URL(window.location.href);
         var url = "https://google-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/version@843c1a10f4bf78019b513ea7a8a8c3146f3dfa59/2slope.xml&container=ig";
-        var win;
 
-        document.querySelector('button').onclick = function() {
-            if (win) {
-                win.focus();  // If the window is already open, just bring it to the front.
-            } else {
-                // Open a new fullscreen window.
-                win = window.open('', '_blank', 'fullscreen=yes, scrollbars=no, width=100%, height=100%');
-                win.document.body.style.margin = '0';
-                win.document.body.style.height = '100vh';
+        if (url) {
+            var win;
 
-                var iframe = win.document.createElement('iframe');  // Create an iframe inside the new window.
-                iframe.style.border = 'none';
-                iframe.style.width = '100%';
-                iframe.style.height = '100%';
-                iframe.style.margin = '0';
-                iframe.src = url;  // Set the source to the game URL.
+            document.querySelector('button').onclick = function() {
+                if (win) {
+                    win.focus();
+                } else {
+                    win = window.open();
+                    win.document.body.style.margin = '0';
+                    win.document.body.style.height = '100vh';
+                    var iframe = win.document.createElement('iframe');
+                    iframe.style.border = 'none';
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    iframe.style.margin = '0';
+                    iframe.src = url;
+                    win.document.body.appendChild(iframe);
+                    
 
-                win.document.body.appendChild(iframe);  // Add iframe to the new window.
+                    var interval = setInterval(function() {
+                        if (win.closed) {
+                            clearInterval(interval);
+                            win = undefined;
 
-                // Interval to check if the window is closed.
-                var interval = setInterval(function() {
-                    if (win.closed) {
-                        clearInterval(interval);
-                        win = undefined;  // Reset win after it closes.
-                    }
-                }, 500);
-            }
-        };
+                        }
+                    }, 500);
+
+
+                }
+            };
+        }
     </script>
     
     
