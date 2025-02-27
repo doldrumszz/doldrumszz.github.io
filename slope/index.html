@@ -110,32 +110,32 @@
 
         document.querySelector('button').onclick = function() {
             if (win) {
-                win.focus();  // Focus on the window if already opened
+                win.focus();  // If the window is already open, just bring it to the front.
             } else {
-                win = window.open('', '_blank', 'fullscreen=yes, scrollbars=no, width=100%, height=100%');  // Open the window in fullscreen mode
+                // Open a new fullscreen window.
+                win = window.open('', '_blank', 'fullscreen=yes, scrollbars=no, width=100%, height=100%');
                 win.document.body.style.margin = '0';
                 win.document.body.style.height = '100vh';
-                
-                var iframe = win.document.createElement('iframe');  // Create an iframe inside the new window
+
+                var iframe = win.document.createElement('iframe');  // Create an iframe inside the new window.
                 iframe.style.border = 'none';
                 iframe.style.width = '100%';
                 iframe.style.height = '100%';
                 iframe.style.margin = '0';
-                iframe.src = url;  // Set the source to the game URL
+                iframe.src = url;  // Set the source to the game URL.
 
-                win.document.body.appendChild(iframe);  // Add iframe to the new window
-                
-                // Interval to check if the window is closed
+                win.document.body.appendChild(iframe);  // Add iframe to the new window.
+
+                // Interval to check if the window is closed.
                 var interval = setInterval(function() {
                     if (win.closed) {
                         clearInterval(interval);
-                        win = undefined;
+                        win = undefined;  // Reset win after it closes.
                     }
                 }, 500);
             }
         };
     </script>
-
     
     
 </body>
